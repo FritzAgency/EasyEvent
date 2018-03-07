@@ -6,6 +6,15 @@
 include_once('api_routes.php');
 
 /*
+Display Homepage 
+
+*/ 
+
+Route::get('/', [
+ 'as' => 'index', 
+  'uses' => 'HomeController@index' 		
+]); 
+/*
  * -------------------------
  * Installer
  * -------------------------
@@ -45,6 +54,9 @@ Route::group(['middleware' => ['installed']], function () {
         'as'   => 'login',
         'uses' => 'UserLoginController@showLogin',
     ]);
+	
+	/*Route::get('/login', 'UserLoginController@showLogin');*/ 
+	
     Route::post('/login', 'UserLoginController@postLogin');
 
     /*
@@ -713,10 +725,10 @@ Route::group(['middleware' => ['auth', 'first.run']], function () {
         ]);
     });
 });
-
-Route::get('/', function () {
+/*redirect to the login page*/ 
+/*Route::get('/', function () {
     return Redirect::route('showSelectOrganiser');
-});
+});*/ 
 
 Route::get('/terms_and_conditions', [
     'as' => 'termsAndConditions',

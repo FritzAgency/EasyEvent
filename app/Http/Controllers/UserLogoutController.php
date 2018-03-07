@@ -22,6 +22,8 @@ class UserLogoutController extends Controller
     {
         $this->auth->logout();
 
-        return redirect()->to('/?logged_out=yup');
+        //return redirect()->to('/?logged_out=yup');
+		return redirect()->to('/');  
+		//return redirect()->route('/index'); //redirect to the homepage
     }
 }
