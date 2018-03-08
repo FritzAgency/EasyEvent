@@ -36,15 +36,20 @@
                             <ul class="nav navbar-nav navbar-right">
 							<!-- show users first_name when logged in --> 
 							@if(!Auth::guest())
-								<li> <a href="#"> {{ Auth::user()->first_name }} </a></li> 
+								
+								<li class="dropdown">
+       <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{ Auth::user()->first_name }}
+       <span class="caret"></span></a>
+       <ul class="dropdown-menu">
+        <li> <a href="{{ route('showSelectOrganiser') }}">Dashboard</a> </li> 
+         <li><a href="#">Ticket</a></li>
+         <li><a href="#">Account Setting</a></li>
+       </ul>
+</li>
 							@else
 							@endif	
 				
-<!-- Dashboard only shown to logged in user --> 				
-						@if(!Auth::guest())				
-       <li> <a href="{{ route('showSelectOrganiser') }}">Dashboard</a> </li> 
-		@else
-		@endif	
+
 							@if(Auth::guest())
                                 <li><a href="#" data-toggle="modal" data-target="#myModal">Create Event</a></li>
 							@else
