@@ -41,19 +41,16 @@
        <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{ Auth::user()->first_name }}
        <span class="caret"></span></a>
        <ul class="dropdown-menu">
-         <li><a href="#">Page 1-1</a></li>
-         <li><a href="#">Page 1-2</a></li>
-         <li><a href="#">Page 1-3</a></li>
+       <li><a href="{{ route('showSelectOrganiser') }}">Dashboard</a></li>
+         <li><a href="#">Tickets</a></li>
+         <li><a href="#">Account Settting</a></li>
+		 
        </ul>
-</li>								
+	   								
 							@else
 							@endif	
-				
-<!-- Dashboard only shown to logged in user --> 				
-						@if(!Auth::guest())				
-       <li> <a href="{{ route('showSelectOrganiser') }}">Dashboard</a> </li> 
-		@else
-		@endif	
+</li>
+
 							
                                 <li><a href="#">Create Event</a></li>
                                 <li><a href="#">Start selling</a></li>
@@ -87,14 +84,6 @@
     </div> 	
 </body>
 
-<li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1
-        <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Page 1-1</a></li>
-          <li><a href="#">Page 1-2</a></li>
-          <li><a href="#">Page 1-3</a></li>
-        </ul>
-</li>
+
 
 </html> 
