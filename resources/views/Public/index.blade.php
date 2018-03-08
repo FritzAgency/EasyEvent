@@ -36,7 +36,16 @@
                             <ul class="nav navbar-nav navbar-right">
 							<!-- show user's first_name when logged in --> 
 							@if(!Auth::guest())
-								<li> <a href="#"> {{ Auth::user()->first_name }} </a></li> 
+								
+<li class="dropdown">
+       <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{ Auth::user()->first_name }}
+       <span class="caret"></span></a>
+       <ul class="dropdown-menu">
+         <li><a href="#">Page 1-1</a></li>
+         <li><a href="#">Page 1-2</a></li>
+         <li><a href="#">Page 1-3</a></li>
+       </ul>
+</li>								
 							@else
 							@endif	
 				
