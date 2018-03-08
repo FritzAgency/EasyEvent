@@ -9,6 +9,9 @@
 </head> 
 
 <body>
+    <header>
+        
+    </header>
 
 <h1> Homepage1 </h1> 
 
@@ -19,7 +22,7 @@
 @if (!Auth::guest())  
 <a href="{{ route('showSelectOrganiser') }}">Dashboard</a>
 @else
-<h1> <a href="{{ route('login')}}"> Login </a> </h1>
+<h1> <a href="/login"> Login </a> </h1>
 @endif
 
 @if(!Auth::guest())

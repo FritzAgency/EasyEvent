@@ -37,7 +37,7 @@ class UserLoginController extends Controller
             ]);
         }
 
-        return View::make('Public.LoginAndRegister.Login');
+        return View::make('Public.LoginAndRegister.login');
     }
 
     /**
