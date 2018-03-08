@@ -23,7 +23,7 @@ class UserLogoutController extends Controller
         $this->auth->logout();
 
         //return redirect()->to('/?logged_out=yup');
-		return redirect()->to('/login');  //redirect to the login page
+		return redirect()->to('/');  //redirect to the login page
 		
     }
 }
