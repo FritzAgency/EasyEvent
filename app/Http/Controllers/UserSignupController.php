@@ -17,7 +17,7 @@ class UserSignupController extends Controller
     public function __construct(Guard $auth)
     {
         if (Account::count() > 0 && !Utils::isAttendize()) {
-            return redirect()->route('login');
+            return redirect()->route('Login');
         }
 
         $this->auth = $auth;
@@ -74,7 +74,7 @@ class UserSignupController extends Controller
 
         session()->flash('message', 'Success! You can now login.');
 
-        return redirect('login'); //redirect to the homepage after successful signup. 
+        return redirect('Login'); //redirect to the homepage after successful signup. 
     }
 
     /**
@@ -99,6 +99,6 @@ class UserSignupController extends Controller
 
         session()->flash('message', 'Success! Your email is now verified. You can now login.');
 
-        return redirect()->route('login');
+        return redirect()->route('Login');
     }
 }
