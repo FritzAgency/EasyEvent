@@ -34,7 +34,7 @@
                                 <a class="navbar-brand" href="#">EasyEvent.com</a>
                             </div>
                             <ul class="nav navbar-nav navbar-right">
-							<!-- show user's first_name when logged in --> 
+							<!-- show users first_name when logged in --> 
 							@if(!Auth::guest())
 								<li> <a href="#"> {{ Auth::user()->first_name }} </a></li> 
 							@else
