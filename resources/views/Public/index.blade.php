@@ -34,50 +34,45 @@
                                 <a class="navbar-brand" href="#">EasyEvent.com</a>
                             </div>
                             <ul class="nav navbar-nav navbar-right">
+							<!-- show user's first_name when logged in --> 
 							@if(!Auth::guest())
 								<li> <a href="#"> {{ Auth::user()->first_name }} </a></li> 
 							@else
 							@endif	
+				
+<!-- Dashboard only shown to logged in user --> 				
+						@if(!Auth::guest())				
+       <li> <a href="{{ route('showSelectOrganiser') }}">Dashboard</a> </li> 
+		@else
+		@endif	
+							
                                 <li><a href="#">Create Event</a></li>
-                                <li><a href="#">Products/Services</a></li>
                                 <li><a href="#">Start selling</a></li>
+								<li><a href="#">Products/Services</a></li>
+								
+								@if (!Auth::guest())
+									@else
                                 <li><a href="/login">Login</a></li>
-                                <li><a href="/signup">Signup</a></li>
+							@endif
+							
+							@if(!Auth::guest())
+        
+                                @else
+								<li> <a href="/signup"> Sign up </a> </li> 	
+								@endif
+								
+								<!-- logout button only shown to the logged in users --> 
+								@if(!Auth::guest())
+									<li> <a href="/logout">Logout</a> 
+								 @else
+									 @endif
+								
+									
                             </ul>
                             </div>
                         </nav> 
             </header>
-
-
-        <div class="col-md-offset-2 col-md-2"> 
-         
-        </div> 
-
-        <div class="col-md-2">
-        <a > Create Event </a>  </br> 
-        </div> 
-
-        <div class="col-md-2">
-        <a href="#"> Start Selling </a> 
-
-        </div> 
-
-
-
-        <div class="col-md-2">
-        @if (!Auth::guest())  
-        <a href="{{ route('showSelectOrganiser') }}">Dashboard</a>
-        @else
-        <h1> <a href="/login"> Dashboard </a> </h1>
-        @endif
-        </div> 
-
-        <div class="col-md-2">
-        @if(!Auth::guest())
-        <a href="{{ route ('logout')}}"> 
-        @else
-        @endif	
-        </div> 	
+ 	
         </div> 
         </div>
     </div> 	
