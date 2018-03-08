@@ -36,33 +36,18 @@
                             <ul class="nav navbar-nav navbar-right">
 							<!-- show users first_name when logged in --> 
 							@if(!Auth::guest())
-								
-<li class="dropdown">
-       <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{ Auth::user()->first_name }}
-       <span class="caret"></span></a>
-       <ul class="dropdown-menu">
-       <li><a href="{{ route('showSelectOrganiser') }}">Dashboard</a></li>
-         <li><a href="#">Tickets</a></li>
-         <li><a href="#">Account Settting</a></li>
-		 
-       </ul>
-	   								
+								<li> <a href="#"> {{ Auth::user()->first_name }} </a></li> 
 							@else
 							@endif	
-</li>
-
-							@if(Auth::guest())
-                                <li><a href="#" data-toggle="modal" data-target="#myModal">Create Event</a></li>
-							@else
-								                                <li><a href="#" >Create Event</a></li>
-															@endif
-															
-								@if(Auth::guest())							
-                                <li><a href="#" data-toggle="modal" data-target="#myModal">Start selling</a></li>
-							@else
-								<li><a href="#">Start selling</a></li>
-							@endif
+				
+<!-- Dashboard only shown to logged in user --> 				
+						@if(!Auth::guest())				
+       <li> <a href="{{ route('showSelectOrganiser') }}">Dashboard</a> </li> 
+		@else
+		@endif	
 							
+                                <li><a href="#" data-toggle="modal" data-target="#myModal">Create Event</a></li>
+                                <li><a href="#" data-toggle="modal" data-target="#myModal">Start selling</a></li>
 								<li><a href="#">Products/Services</a></li>
 								
 								@if (!Auth::guest())
@@ -93,7 +78,7 @@
       <div class="modal-content">
         <div class="modal-header" style="padding:35px 50px;">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
+          <h4><span class="glyphicon glyphicon-lock"></span> Signup</h4>
         </div>
         <div class="modal-body" style="padding:40px 50px;">
           <form role="form">
@@ -119,6 +104,14 @@
     </div> 	
 </body>
 
-
+<li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Page 1-1</a></li>
+          <li><a href="#">Page 1-2</a></li>
+          <li><a href="#">Page 1-3</a></li>
+        </ul>
+</li>
 
 </html> 
