@@ -88,7 +88,7 @@
             </div>
             <div class="form-group">
               <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
-              <input type="text" class="form-control" id="psw" placeholder="Enter password">
+              <input type="password" class="form-control" id="psw" placeholder="Enter password">
             </div>
               <button type="submit" class="btn btn-success btn-block">Signup</button>
           </form>
@@ -96,22 +96,10 @@
     </div>
   </div> 
 </div>
-                        </nav> 
+    </nav> 
             </header>
- 	
         </div> 
         </div>
     </div> 	
 </body>
-
-<li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1
-        <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Page 1-1</a></li>
-          <li><a href="#">Page 1-2</a></li>
-          <li><a href="#">Page 1-3</a></li>
-        </ul>
-</li>
-
 </html> 
