@@ -12,10 +12,10 @@ class HomeController extends Controller
 	function that displays the homepage view.  
 	
 	*/  
-	public function index(Request $request)
+	public function showHomepage(Request $request)
     {
         
-        return View::make('public.index');
+        return View::make('Public.index');
 
     }
 }

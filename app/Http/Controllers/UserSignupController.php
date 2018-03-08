@@ -27,7 +27,9 @@ class UserSignupController extends Controller
     public function showSignup()
     {
         $is_attendize = Utils::isAttendize();
-        return view('Public.LoginAndRegister.Signup', compact('is_attendize'));
+  
+		return view('Public.LoginAndRegister.Signup', compact('is_attendize')); 
+		 
     }
 
     /**
@@ -72,7 +74,7 @@ class UserSignupController extends Controller
 
         session()->flash('message', 'Success! You can now login.');
 
-        return redirect('login');
+        return redirect('login'); //redirect to the homepage after successful signup. 
     }
 
     /**

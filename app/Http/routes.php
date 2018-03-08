@@ -10,9 +10,9 @@ Display Homepage
 
 */ 
 
-Route::get('/', [
- 'as' => 'index', 
-  'uses' => 'HomeController@index' 		
+Route::any('/', [
+ 'as' => 'showHomepage', 
+  'uses' => 'HomeController@showHomepage' 		
 ]); 
 /*
  * -------------------------

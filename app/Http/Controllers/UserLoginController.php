@@ -64,6 +64,8 @@ class UserLoginController extends Controller
                 ->withInput();
         }
 
-        return redirect()->intended(route('showSelectOrganiser'));
+        //return redirect()->intended(route('showSelectOrganiser'));
+		//return redirect()->intended(route('/'));  
+		return redirect()->to('/'); //route the login to the homepage 
     }
 }
