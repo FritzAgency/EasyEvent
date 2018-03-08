@@ -34,6 +34,10 @@
                                 <a class="navbar-brand" href="#">EasyEvent.com</a>
                             </div>
                             <ul class="nav navbar-nav navbar-right">
+							@if(!Auth::guest())
+								<li> <a href="#"> {{ Auth::user()->first_name }} </a></li> 
+							@else
+							@endif	
                                 <li><a href="#">Create Event</a></li>
                                 <li><a href="#">Products</a></li>
                                 <li><a href="#">Services</a></li>
@@ -65,7 +69,7 @@
         @if (!Auth::guest())  
         <a href="{{ route('showSelectOrganiser') }}">Dashboard</a>
         @else
-        <h1> <a href="/login"> Login </a> </h1>
+        <h1> <a href="/login"> Dashboard </a> </h1>
         @endif
         </div> 
 
