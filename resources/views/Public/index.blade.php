@@ -51,9 +51,18 @@
 							@endif	
 </li>
 
-							
+							@if(Auth::guest())
                                 <li><a href="#" data-toggle="modal" data-target="#myModal">Create Event</a></li>
+							@else
+								                                <li><a href="#" >Create Event</a></li>
+															@endif
+															
+								@if(Auth::guest())							
                                 <li><a href="#" data-toggle="modal" data-target="#myModal">Start selling</a></li>
+							@else
+								<li><a href="#">Start selling</a></li>
+							@endif
+							
 								<li><a href="#">Products/Services</a></li>
 								
 								@if (!Auth::guest())
