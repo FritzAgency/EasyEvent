@@ -7,13 +7,20 @@ include_once('api_routes.php');
 
 /*
 Display Homepage 
-
 */ 
 
-Route::any('/', [
+Route::get('/', [
  'as' => 'showHomepage', 
   'uses' => 'HomeController@showHomepage' 		
-]); 
+]);
+
+/*
+route to handle the POST for registration
+*/ 
+Route::post('/', 'UserSignupController@postSignup');
+
+
+ 
 /*
  * -------------------------
  * Installer

@@ -26,7 +26,7 @@
 </head> 
 
 <body>
-    <div class=container>   
+    <div class="container">   
             <header>
                     <nav class="navbar navbar-inverse">
                             <div class="container-fluid">
@@ -66,7 +66,7 @@
 								
 								@if (!Auth::guest())
 									@else
-                                <li><a href="/login" data-toggle="modal" data-target="#myModal">Login</a></li>
+                                <li><a href="/login" data-toggle="modal" data-target="#loginModal">Login</a></li>
 							@endif
 							
 							@if(!Auth::guest())
@@ -97,8 +97,18 @@
         <div class="modal-body" style="padding:40px 50px;">
           <form role="form">
             <div class="form-group">
-              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
-              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+              <label for="First Name"><span class="glyphicon glyphicon-user"></span> First Name</label>
+              <input type="text" class="form-control" id="" placeholder="Enter your First Name">
+            </div>
+			
+			<div class="form-group">
+              <label for=""><span class="glyphicon glyphicon-user"></span> Last Name</label>
+              <input type="text" class="form-control" id="" placeholder="Enter your Last Name">
+            </div>
+			
+			<div class="form-group">
+              <label for="Email"><span class="glyphicon glyphicon-user"></span>Email</label>
+              <input type="text" class="form-control" id="" placeholder="Enter email">
             </div>
             <div class="form-group">
               <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
@@ -109,7 +119,10 @@
         </div>      
     </div>
   </div> 
-</div>
+  
+  
+</div> 
+  
     </nav> 
             </header>
         </div> 
