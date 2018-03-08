@@ -35,8 +35,7 @@
                             </div>
                             <ul class="nav navbar-nav navbar-right">
                                 <li><a href="#">Create Event</a></li>
-                                <li><a href="#">Products</a></li>
-                                <li><a href="#">Services</a></li>
+                                <li><a href="#">Products/Services</a></li>
                                 <li><a href="#">Start selling</a></li>
                                 <li><a href="/login">Login</a></li>
                                 <li><a href="/signup">Signup</a></li>
